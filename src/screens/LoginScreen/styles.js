@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
     },
     submitButton: {
-        height: height * 6,
+        height: width * 12,
         width: width * 80,
         alignItems: 'center',
         justifyContent: 'center',

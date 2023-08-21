@@ -4,7 +4,7 @@ import { colors } from '../../../assets';
 
 const styles = StyleSheet.create({
     input: {
-        height: height * 5.8,
+        height: width * 11.5,
         width: width * 80,
         backgroundColor: colors.white,
         padding: width * 1.5,
