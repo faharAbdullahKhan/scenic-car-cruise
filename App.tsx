@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {PersistGate} from 'redux-persist/src/integration/react';
 import {store, persistor} from './src/redux/store';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import SplashScreen from 'react-native-splash-screen'
 import {NavigationContainer} from '@react-navigation/native';
 import {AppStack, AuthStack} from './src/Navigation';
 import {Provider, useSelector} from 'react-redux';
@@ -27,8 +28,12 @@ const Navigation = () => {
     </NavigationContainer>
   );
 };
-class App extends React.Component {
-  render() {
+const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 2000);
+  }, []);
     return (
       <Provider store={store}>
         <PersistGate persistor={persistor}>
@@ -36,7 +41,6 @@ class App extends React.Component {
         </PersistGate>
       </Provider>
     );
-  }
 }
 
 export default App;

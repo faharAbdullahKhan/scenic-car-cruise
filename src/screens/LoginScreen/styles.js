@@ -1,51 +1,35 @@
 import { StyleSheet } from 'react-native';
-import { width } from '../../Units'
+import { height, width } from '../../Units'
+import { colors } from '../../../assets';
 
 const styles = StyleSheet.create({
     safeAreaView: {
         flex: 1,
     },
     container: {
-        width: width * 90,
-        alignSelf: 'center'
+        flex: 1,
     },
-    heading: {
-        fontWeight: 'bold',
-        fontSize: 6.5 * width
-    },
-    listItem: {
-        // flexDirection: "row",
-        // alignItems: 'center',
-        paddingBottom: 2 * width,
-        paddingTop: 4 * width,
+    loginHeader: {
+        width: width * 100,
+        height: height * 36,
+        resizeMode: 'cover',
     },
     submitButton: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
+        height: height * 6,
+        width: width * 80,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'red'
-    },
-    errorText: {
-        marginLeft: 12,
-        color: 'red'
-    },
-    successText: {
-        marginLeft: 12,
-        color: 'green'
+        backgroundColor: colors.buttonColor,
+        borderRadius: width * 1.5,
+        marginTop: height * 3.5
     },
     submitButtonText: {
         color: '#FFF',
         fontSize: width * 4.2,
-        fontWeight: 'bold'
+        fontWeight: '700'
     },
-    postScreenButton:{
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+    passwordContainer: {
+        marginTop: height * 1.5
     }
 });
 
