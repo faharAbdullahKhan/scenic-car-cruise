@@ -24,8 +24,15 @@ import { height, width } from '../../Units';
 
 const RegisterScreen = ({ navigation }) => {
   const dispatch = useDispatch();
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [vehicleYear, setVehicleYear] = useState('');
+  const [vehicleMake, setVehicleMake] = useState('');
+  const [vehicleModel, setVehicleModel] = useState('');
+  const [aboutMe, setAboutMe] = useState('');
   // const [errorText, setErrorText] = useState('');
 
   const onSubmit = async () => {
@@ -54,67 +61,85 @@ const RegisterScreen = ({ navigation }) => {
       <StatusBar barStyle="dark-content" />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
-          <Image source={icons.loginHeader} style={styles.loginHeader} />
-          <View style={{ alignItems: 'center', marginTop: height * 6 }}>
+          <Image source={icons.signupHeader} style={styles.loginHeader} />
+          <View style={{
+            alignItems: 'center',
+            marginTop: height * -13.5
+          }}>
+            <View style={styles.profileImageContainer}>
+              <View style={{ width: width * 20, }}>
+                <Image source={icons.profileImage} style={styles.profileImage} />
+                <View style={{
+                  backgroundColor: colors.red,
+                  position: 'absolute',
+                  bottom: 0,
+                  right: width * 0.5,
+                  padding: width * 1,
+                  borderRadius: width * 3
+                }}>
+                  <Image source={icons.cameraIcon} style={{ width: width * 4, height: width * 4, resizeMode: 'contain' }} />
+                </View>
+              </View>
+            </View>
             <TextInputWrapper
-              onChangeText={setEmail}
-              value={email}
+              onChangeText={setFirstName}
+              value={firstName}
               placeholder="Name"
               label="First Name"
               styles={styles.inputContainer}
             />
             <TextInputWrapper
-              onChangeText={setPassword}
-              value={password}
+              onChangeText={setLastName}
+              value={lastName}
               placeholder="Last Name"
               label="Last Name"
               styles={styles.inputContainer}
             />
             <TextInputWrapper
-              onChangeText={setPassword}
-              value={password}
+              onChangeText={setEmail}
+              value={email}
               placeholder="Email"
               label="Email Address"
               styles={styles.inputContainer}
             />
             <TextInputWrapper
-              onChangeText={setPassword}
-              value={password}
+              onChangeText={setUsername}
+              value={username}
               placeholder="Username"
               label="Username"
               styles={styles.inputContainer}
             />
             <TextInputWrapper
-              onChangeText={setPassword}
-              value={password}
+              onChangeText={setPhoneNumber}
+              value={phoneNumber}
               placeholder="Phone"
               label="Phone Number"
               styles={styles.inputContainer}
             />
             <TextInputWrapper
-              onChangeText={setPassword}
-              value={password}
+              onChangeText={setVehicleYear}
+              value={vehicleYear}
               placeholder="Vehicle Year"
               label="Vehicle Year"
               styles={styles.inputContainer}
             />
             <TextInputWrapper
-              onChangeText={setPassword}
-              value={password}
+              onChangeText={setVehicleMake}
+              value={vehicleMake}
               placeholder="Vehicle Make"
               label="Vehicle Make"
               styles={styles.inputContainer}
             />
             <TextInputWrapper
-              onChangeText={setPassword}
-              value={password}
+              onChangeText={setVehicleModel}
+              value={vehicleModel}
               placeholder="Vehicle Model"
               label="Vehicle Model"
               styles={styles.inputContainer}
             />
             <TextInputWrapper
-              onChangeText={setPassword}
-              value={password}
+              onChangeText={setAboutMe}
+              value={aboutMe}
               placeholder="About"
               label="About Me"
               multiline={true}

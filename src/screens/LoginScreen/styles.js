@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     },
     loginHeader: {
         width: width * 100,
-        height: height * 36,
-        resizeMode: 'cover',
+        height: height * 45,
+        resizeMode: 'stretch',
     },
     submitButton: {
         height: width * 12,

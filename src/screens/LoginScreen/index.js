@@ -53,7 +53,7 @@ const LoginScreen = ({ navigation }) => {
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
         <Image source={icons.loginHeader} style={styles.loginHeader} />
-        <View style={{ alignItems: 'center', marginTop: height * 6 }}>
+        <View style={{ alignItems: 'center', marginTop: height * 3 }}>
           <TextInputWrapper
             onChangeText={setEmail}
             value={email}

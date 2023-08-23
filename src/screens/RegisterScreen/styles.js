@@ -14,6 +14,17 @@ const styles = StyleSheet.create({
         height: height * 45,
         resizeMode: 'stretch',
     },
+    profileImageContainer: {
+        // backgroundColor: 'purple',
+        width: width * 80,
+        marginBottom: height * 4
+    },
+    profileImage: {
+        // backgroundColor: 'green',
+        height: width * 20,
+        width: width * 20,
+        resizeMode: 'contain'
+    },
     submitButton: {
         height: width * 12,
         width: width * 80,

@@ -3,7 +3,8 @@
 export const icons = {
   loginHeader: require('./images/loginHeader.png'),
   profileImage: require('./images/profileImage.png'),
-  lock: require('./icons/lock.png'),
+  cameraIcon: require('./icons/cameraIcon.png'),
+  signupHeader: require('./images/signupHeader.png'),
   lock2: require('./icons/lock2.png'),
   lock3: require('./icons/lock3.png'),
   eye: require('./icons/eye.png'),
