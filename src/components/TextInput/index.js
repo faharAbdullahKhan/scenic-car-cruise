@@ -25,11 +25,14 @@ const TextInputWrapper = props => {
         fontSize: width * 3.5
       }}>{props?.label ?? 'Label'}</Text>}
       <TextInput
-        style={styles.input}
+        style={[styles.input, { textAlignVertical: props?.multiline ? 'top' : 'center' },props?.textStyles]}
         onChangeText={props?.onChangeText}
         value={props?.value}
         placeholder={props?.placeholder ?? '.....'}
         secureTextEntry={props?.secureTextEntry ? (props?.secureTextEntry == true && showPassword) : false}
+        multiline={props?.multiline ? true : false}
+        numberOfLines={props?.numberOfLines ?? 1}
+
       />
       {props?.secureTextEntry && <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={{ position: 'absolute', bottom: height * 1.5, right: width * 1, paddingRight: width * 2 }} activeOpacity={2}>
         <Image source={showPassword ? icons.eyehide : icons.eye} style={{ width: width * 6, height: width * 6, resizeMode: 'contain', tintColor: colors.red }} />

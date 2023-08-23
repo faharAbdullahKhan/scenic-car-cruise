@@ -2,6 +2,7 @@
 
 export const icons = {
   loginHeader: require('./images/loginHeader.png'),
+  profileImage: require('./images/profileImage.png'),
   lock: require('./icons/lock.png'),
   lock2: require('./icons/lock2.png'),
   lock3: require('./icons/lock3.png'),

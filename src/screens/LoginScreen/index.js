@@ -21,7 +21,7 @@ import { login } from '../../redux/actions/authActions';
 import { colors, icons } from '../../../assets';
 import { height, width } from '../../Units';
 
-const LoginScreen = props => {
+const LoginScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -89,11 +89,14 @@ const LoginScreen = props => {
             fontWeight: '400',
             fontSize: width * 3.5
           }}>Don’t have an account? </Text>
-          <Text style={{
-            color: colors.red,
-            fontWeight: 'bold',
-            fontSize: width * 3.5
-          }}>Signup</Text>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => navigation.push('Register')}>
+            <Text style={{
+              color: colors.red,
+              fontWeight: 'bold',
+              fontSize: width * 3.5
+            }}>Signup</Text></TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
