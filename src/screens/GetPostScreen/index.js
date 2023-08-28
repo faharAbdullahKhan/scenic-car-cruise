@@ -24,14 +24,14 @@ const GetPost = props => {
   const dispatch = useDispatch();
   const posts = useSelector(state => state.postReducer.posts);
 
-  useFocusEffect(
-    React.useCallback(() => {
-      async function fetchData() {
-        await dispatch(getPost());
-      }
-      fetchData();
-    }, []),
-  );
+  // useFocusEffect(
+  //   React.useCallback(() => {
+  //     async function fetchData() {
+  //       await dispatch(getPost());
+  //     }
+  //     fetchData();
+  //   }, []),
+  // );
   const backToCreate = () => {
     props.navigation.navigate('CreatePost');
   };

@@ -9,10 +9,10 @@ export const icons = {
   lock3: require('./icons/lock3.png'),
   eye: require('./icons/eye.png'),
   eyehide: require('./icons/eyehide.png'),
-  logo: require('./images/logo.png'),
-  logoHeader: require('./images/logoheader.png'),
+  home: require('./icons/home.png'),
+  profile: require('./icons/profile.png'),
   dashboard: require('./icons/dashboardIcon.png'),
-  menu: require('./icons/menuIcon.png'),
+  homeScreenHeader: require('./images/homeScreenHeader.png'),
   calander: require('./icons/calanderIcon.png'),
   progress: require('./icons/progressIcon.png'),
   checked: require('./icons/checked.png'),
@@ -70,7 +70,9 @@ export const colors = {
   black: '#023047',
   white: '#FFFFFF',
   blackText: '#000000',
-  greyText: '#5F5F5F'
+  greyText: '#5F5F5F',
+  primary: '#DB312A',
+  temp:'orange'
 };
 
 // export const fonts = {

@@ -1,12 +1,15 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import GetPostScreen from '../screens/GetPostScreen';
-import CreatePostScreen from '../screens/CreatePostScreen';
+import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
+import { getTabNavigationOptions } from './NavigationOptions';
 
 const Auth = createNativeStackNavigator();
 const App = createNativeStackNavigator();
+const Tabs = createBottomTabNavigator();
 
 export const AuthStack = () => {
   return (
@@ -28,8 +31,19 @@ export const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <App.Screen name="GetPost" component={GetPostScreen} />
-      <App.Screen name="CreatePost" component={CreatePostScreen} />
+      <App.Screen name="HomeTabs" component={HomeTabs} />
     </App.Navigator>
+  );
+};
+
+export const HomeTabs = ({ route }) => {
+  return (
+    <Tabs.Navigator
+      tabBarPosition="bottom"
+      initialRouteName={'Home'}
+      screenOptions={getTabNavigationOptions}>
+      <Tabs.Screen component={HomeScreen} name="Home" />
+      <Tabs.Screen component={GetPostScreen} name="Profile" />
+    </Tabs.Navigator>
   );
 };
