@@ -6,10 +6,12 @@ import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import { getTabNavigationOptions } from './NavigationOptions';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const Auth = createNativeStackNavigator();
 const App = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
+const Profile = createNativeStackNavigator();
 
 export const AuthStack = () => {
   return (
@@ -43,7 +45,19 @@ export const HomeTabs = ({ route }) => {
       initialRouteName={'Home'}
       screenOptions={getTabNavigationOptions}>
       <Tabs.Screen component={HomeScreen} name="Home" />
-      <Tabs.Screen component={GetPostScreen} name="Profile" />
+      <Tabs.Screen component={ProfileStack} name="ProfileStack" />
     </Tabs.Navigator>
+  );
+};
+
+export const ProfileStack = () => {
+  return (
+    <Profile.Navigator
+      headerMode="screen"
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Profile.Screen name="Profile" component={ProfileScreen} />
+    </Profile.Navigator>
   );
 };

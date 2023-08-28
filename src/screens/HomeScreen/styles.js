@@ -11,21 +11,23 @@ const styles = StyleSheet.create({
     },
     loginHeader: {
         width: width * 100,
-        height: height * 45,
+        height: height * 40,
         resizeMode: 'stretch',
     },
     submitButton: {
+        flexDirection: 'row',
         height: width * 12,
-        width: width * 80,
+        width: width * 85,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         backgroundColor: colors.buttonColor,
         borderRadius: width * 1.5,
-        marginTop: height * 3.5
+        marginTop: height * 1.7,
+        paddingHorizontal: width * 5
     },
     submitButtonText: {
         color: '#FFF',
-        fontSize: width * 4.2,
+        fontSize: width * 3.2,
         fontWeight: '700'
     },
     passwordContainer: {
