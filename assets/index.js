@@ -17,9 +17,10 @@ export const icons = {
   PlusIcon: require('./icons/PlusIcon.png'),
   backArrow: require('./icons/backArrow.png'),
   profileImage2: require('./images/profileImage2.png'),
+  starIcon: require('./icons/starIcon.png'),
+  chatIcon: require('./icons/chatIcon.png'),
+  likeIcon: require('./icons/likeIcon.png'),
   
-  check: require('./icons/check.png'),
-  userDummyIcon: require('./images/ic_user.png'),
   logoWhite: require('./icons/logoWhite.png'),
   EllipseBackground: require('./icons/EllipseBackground.png'),
   forwardIcon: require('./icons/forwardIcon.png'),
