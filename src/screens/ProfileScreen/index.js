@@ -124,18 +124,20 @@ const ProfileScreen = ({ navigation }) => {
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     alignSelf: 'center',
-                    width: width * 95,
+                    width: width * 90,
                     marginTop: width * 6,
                     marginBottom: width * 3
                 }}>
-                    <TouchableOpacity style={{
-                        backgroundColor: colors.red,
-                        height: width * 9,
-                        width: width * 9,
-                        alignItems: 'center',
-                        borderRadius: width * 5,
-                        justifyContent: 'center'
-                    }}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('Home')}
+                        style={{
+                            backgroundColor: colors.red,
+                            height: width * 9,
+                            width: width * 9,
+                            alignItems: 'center',
+                            borderRadius: width * 5,
+                            justifyContent: 'center'
+                        }}>
                         <Image source={icons.backArrow} style={{
                             tintColor: colors.white,
                             height: width * 4,
@@ -154,12 +156,16 @@ const ProfileScreen = ({ navigation }) => {
                     alignItems: 'center',
                     marginBottom: width * 5
                 }}>
-                    <Image source={icons.profileImage2}
-                        style={{
-                            height: width * 21,
-                            width: width * 21,
-                            resizeMode: 'contain'
-                        }} />
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('EditProfile')}
+                    >
+                        <Image source={icons.profileImage2}
+                            style={{
+                                height: width * 21,
+                                width: width * 21,
+                                resizeMode: 'contain'
+                            }} />
+                    </TouchableOpacity>
                     <Text style={{
                         color: colors.black,
                         fontSize: width * 4.8,

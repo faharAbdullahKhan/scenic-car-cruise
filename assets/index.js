@@ -20,8 +20,10 @@ export const icons = {
   starIcon: require('./icons/starIcon.png'),
   chatIcon: require('./icons/chatIcon.png'),
   likeIcon: require('./icons/likeIcon.png'),
+  editIcon: require('./icons/editIcon.png'),
+  shareIcon: require('./icons/shareIcon.png'),
+  editImage: require('./icons/editImage.png'),
   
-  logoWhite: require('./icons/logoWhite.png'),
   EllipseBackground: require('./icons/EllipseBackground.png'),
   forwardIcon: require('./icons/forwardIcon.png'),
   resume: require('./icons/resume.png'),

@@ -6,6 +6,7 @@ import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import { getTabNavigationOptions } from './NavigationOptions';
 import ProfileScreen from '../screens/ProfileScreen';
+import EditProfileScreen from '../screens/EditProfileScreen';
 
 const Auth = createNativeStackNavigator();
 const App = createNativeStackNavigator();
@@ -33,6 +34,7 @@ export const AppStack = () => {
         headerShown: false,
       }}>
       <App.Screen name="HomeTabs" component={HomeTabs} />
+      <App.Screen name="EditProfile" component={EditProfileScreen} />
     </App.Navigator>
   );
 };
@@ -57,6 +59,7 @@ export const ProfileStack = () => {
         headerShown: false,
       }}>
       <Profile.Screen name="Profile" component={ProfileScreen} />
+      {/* <Profile.Screen name="EditProfile" component={EditProfileScreen} /> */}
     </Profile.Navigator>
   );
 };
