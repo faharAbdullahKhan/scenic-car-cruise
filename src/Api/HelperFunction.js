@@ -45,6 +45,15 @@ export const log = (label, data) => {
     }
 };
 
+export const jsonToFormdata = json => {
+    var data = new FormData();
+    const entries = Object.entries(json);
+    entries.forEach(entry => {
+      data.append(entry[0], entry[1]);
+    });
+    return data;
+  };
+
 export const getConfigs = (method, body, formData = true) => {
     var headers = {
         'Accept': 'application/json',
@@ -59,7 +68,7 @@ export const getConfigs = (method, body, formData = true) => {
         headers: headers,
     };
     if (body) {
-        if (method == 'POST' || method == 'PUT') {
+        if (method == 'POST' || method == 'PUT' || method == 'GET') {
             if (formData == true) {
                 configs['body'] = jsonToFormdata(body);
             } else {

@@ -7,12 +7,14 @@ const authReducer = (state = initialState, action) => {
     case types.GET_LOGIN:
       return {
         ...state,
-        token: action?.payload?.token,
+        token: action?.payload?.access_token,
+        user: action?.payload?.user
       };
     case types.GET_LOGOUT:
       return {
         ...state,
         token: null,
+        user: {}
       };
     default:
       return state;

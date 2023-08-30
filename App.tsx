@@ -12,11 +12,11 @@ const RootStack = () => {
   const token = useSelector(state => state.authReducer.token);
   return (
     <Root.Navigator screenOptions={{ headerShown: false }}>
-      <Root.Screen name="AppStack" component={AppStack} />
-      {/* {token ? (
-      ) : (
+      {token ? (
+        <Root.Screen name="AppStack" component={AppStack} />
+        ) : (
         <Root.Screen name="AuthStack" component={AuthStack} />
-      )} */}
+      )}
     </Root.Navigator>
   );
 };

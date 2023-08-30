@@ -3,6 +3,7 @@ const postsReducer = {
 };
 const authReducer = {
   token: null,
+  user: {}
 };
 const initialStates = {
   postReducer: postsReducer,

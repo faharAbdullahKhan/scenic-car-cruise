@@ -19,6 +19,7 @@ import styles from './styles';
 import { useDispatch } from 'react-redux';
 import { colors, icons } from '../../../assets';
 import { height, width } from '../../Units';
+import { logout } from '../../redux/actions/authActions';
 
 const options = [
     { id: 1, name: 'America to UK', route: '' },
@@ -29,8 +30,9 @@ const options = [
 const ProfileScreen = ({ navigation }) => {
     const dispatch = useDispatch();
 
-    // const onSubmit = async () => {
-    // };
+    const onLogout = async () => {
+        let resp = await dispatch(logout());
+    };
     const homeItem = ({ item, index }) => {
         return <TouchableOpacity key={index}
             // onPress={onSubmit} 
@@ -145,12 +147,15 @@ const ProfileScreen = ({ navigation }) => {
                             resizeMode: 'contain'
                         }} />
                     </TouchableOpacity>
-
-                    <Text style={{
-                        fontWeight: 'bold',
-                        fontSize: width * 3.5,
-                        color: colors.black
-                    }}>Log Out</Text>
+                    <TouchableOpacity
+                    onPress={onLogout}
+                    >
+                        <Text style={{
+                            fontWeight: 'bold',
+                            fontSize: width * 3.5,
+                            color: colors.black
+                        }}>Log Out</Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={{
                     alignItems: 'center',

@@ -8,12 +8,16 @@ import {
 import { base_url } from './configs'
 
 export const get = async (endpoint) => {
-    const url = base_url + endpoint;
+    const url = base_url + endpoint
+
+    const configs = getConfigs('GET', body, formData);
+    console.log(configs, 'Shit')
     try {
         const networkResult = await performNetworkRequest(url);
         const result = await handleResponse(networkResult);
         return Promise.resolve(result);
     } catch (e) {
+        console.log('e == ', e);
         const message = getMessage(e);
         return Promise.reject(message);
     }
@@ -23,7 +27,7 @@ export const post = async (endpoint, body, formData, queryParams) => {
     const url = base_url + endpoint + dataToQueryParameter(queryParams);
 
     const configs = getConfigs('POST', body, formData);
-console.log(configs,'Shit')
+    console.log(configs, 'Shit')
     try {
         const networkResult = await performNetworkRequest(url, configs);
         const result = await handleResponse(networkResult);

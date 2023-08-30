@@ -23,8 +23,8 @@ import { height, width } from '../../Units';
 
 const LoginScreen = ({ navigation }) => {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('uk2903656@gmail.com');
+  const [password, setPassword] = useState('12345678');
   // const [errorText, setErrorText] = useState('');
 
   const onSubmit = async () => {
@@ -38,11 +38,12 @@ const LoginScreen = ({ navigation }) => {
     // } else if (!regexExp.test(email.trim().toLowerCase())) {
     //   setErrorText('Invalid Email');
     // } else {
-    //   const data = {
-    //     email: email.trim(),
-    //     password: password.trim(),
-    //   };
-    //   await dispatch(login(data));
+    const data = {
+      email: email.trim(),
+      password: password.trim(),
+    };
+    let resp = await dispatch(login(data));
+    console.log(resp?.message, 'wow');
     //   setEmail('');
     //   setPassword('');
     //   setErrorText('');

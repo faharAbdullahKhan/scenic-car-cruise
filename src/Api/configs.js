@@ -1,7 +1,7 @@
-export const base_url = `https://logistiks1.herokuapp.com/`;
+export const base_url = `https://staffshaw.com/cruise/`;
 export const endpoints = {
   post: 'api/user/post',
-  login: 'api/user/login',
+  login: 'api/auth/login',
 };
 export default configs = {
   endpoints: endpoints,
