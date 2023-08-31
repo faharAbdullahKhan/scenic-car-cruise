@@ -21,7 +21,11 @@ export const login = data => {
 export const logout = () => {
   return async dispatch => {
     try {
+      const response = await post(
+        endpoints.logout
+      );
       dispatch({ type: types.GET_LOGOUT });
+      return Promise.resolve(response);
     } catch (e) {
       return Promise.reject(e);
     }

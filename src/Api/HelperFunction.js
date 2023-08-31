@@ -1,5 +1,5 @@
 const TAG = '__API__';
-
+import {store} from '../redux/store';
 export const handleResponse = ({ response, jsonResponse }) => {
     switch (response.status) {
         case 200:
@@ -63,6 +63,17 @@ export const getConfigs = (method, body, formData = true) => {
     if (formData == true) {
         headers['Content-Type'] = 'multipart/form-data';
     }
+    const data = store.getState();
+    if (data) {
+      if (data.authReducer) {
+        if (data.authReducer.token != null) {
+          if (data.authReducer.token) {
+            headers['Authorization'] = 'Bearer ' + data.authReducer.token;
+          }
+        }
+      }
+    }
+
     var configs = {
         method: method,
         headers: headers,

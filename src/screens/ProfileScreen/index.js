@@ -32,6 +32,7 @@ const ProfileScreen = ({ navigation }) => {
 
     const onLogout = async () => {
         let resp = await dispatch(logout());
+        console.log(resp,'resp');
     };
     const homeItem = ({ item, index }) => {
         return <TouchableOpacity key={index}
