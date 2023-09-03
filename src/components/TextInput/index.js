@@ -13,7 +13,7 @@ import { colors, icons } from '../../../assets';
 
 const TextInputWrapper = props => {
   const [showPassword, setShowPassword] = useState(true);
-  if (props?.search || props?.edit) {
+  if (props?.search || props?.edit || props?.comment) {
     return (
       <View style={[{
         // width: width * 80
@@ -31,7 +31,7 @@ const TextInputWrapper = props => {
         <TouchableOpacity
           // onPress={() => setShowPassword(!showPassword)} 
           style={{ position: 'absolute', bottom: height * 2.4, right: width * 1, paddingRight: width * 2 }} activeOpacity={2}>
-          <Image source={props?.search ? icons.searchIcon : icons.editIcon} style={{ width: width * 4, height: width * 4, resizeMode: 'contain' }} />
+          <Image source={props?.search ? icons.searchIcon : props?.edit? icons.editIcon: icons.forwardArrow} style={{ width: width * 4, height: width * 4, resizeMode: 'contain' }} />
         </TouchableOpacity>
       </View>
     )

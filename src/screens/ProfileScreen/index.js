@@ -32,7 +32,7 @@ const ProfileScreen = ({ navigation }) => {
 
     const onLogout = async () => {
         let resp = await dispatch(logout());
-        console.log(resp,'resp');
+        console.log(resp, 'resp');
     };
     const homeItem = ({ item, index }) => {
         return <TouchableOpacity key={index}
@@ -149,7 +149,7 @@ const ProfileScreen = ({ navigation }) => {
                         }} />
                     </TouchableOpacity>
                     <TouchableOpacity
-                    onPress={onLogout}
+                        onPress={onLogout}
                     >
                         <Text style={{
                             fontWeight: 'bold',
@@ -179,13 +179,15 @@ const ProfileScreen = ({ navigation }) => {
                         marginTop: width * 1.5
                     }}>Smith Grey</Text>
                 </View>
-                <View style={{
-                    flexDirection: 'row',
-                    width: width * 80,
-                    alignSelf: 'center',
-                    justifyContent: 'space-between',
-                    alignItems: 'center'
-                }}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Comments')}
+                    style={{
+                        flexDirection: 'row',
+                        width: width * 80,
+                        alignSelf: 'center',
+                        justifyContent: 'space-between',
+                        alignItems: 'center'
+                    }}>
                     <Text style={{
                         fontWeight: 'bold',
                         fontSize: width * 4,
@@ -205,15 +207,17 @@ const ProfileScreen = ({ navigation }) => {
                             fontSize: width * 4.5
                         }}>4</Text>
                     </View>
-                </View>
-                <View style={{
-                    flexDirection: 'row',
-                    width: width * 80,
-                    alignSelf: 'center',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    marginTop: width * 2
-                }}>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('AllRoutes')}
+                    style={{
+                        flexDirection: 'row',
+                        width: width * 80,
+                        alignSelf: 'center',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginTop: width * 2
+                    }}>
                     <Text style={{
                         fontWeight: 'bold',
                         fontSize: width * 4,
@@ -237,7 +241,7 @@ const ProfileScreen = ({ navigation }) => {
                             fontSize: width * 4.5
                         }}>4.9</Text>
                     </View>
-                </View>
+                </TouchableOpacity>
                 <FlatList
                     style={{
                         marginTop: width * 8,
