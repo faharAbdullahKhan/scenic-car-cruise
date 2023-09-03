@@ -26,11 +26,12 @@ const TextInputWrapper = props => {
           secureTextEntry={props?.secureTextEntry ? (props?.secureTextEntry == true && showPassword) : false}
           multiline={props?.multiline ? true : false}
           numberOfLines={props?.numberOfLines ?? 1}
+          placeholderTextColor={props?.placeholderTextColor?? colors.greyText}
 
         />
         <TouchableOpacity
           // onPress={() => setShowPassword(!showPassword)} 
-          style={{ position: 'absolute', bottom: height * 2.4, right: width * 1, paddingRight: width * 2 }} activeOpacity={2}>
+          style={{ position: 'absolute', bottom: width * 4, right: width * 1, paddingRight: width * 2 }} activeOpacity={2}>
           <Image source={props?.search ? icons.searchIcon : props?.edit? icons.editIcon: icons.forwardArrow} style={{ width: width * 4, height: width * 4, resizeMode: 'contain' }} />
         </TouchableOpacity>
       </View>
@@ -55,7 +56,7 @@ const TextInputWrapper = props => {
           secureTextEntry={props?.secureTextEntry ? (props?.secureTextEntry == true && showPassword) : false}
           multiline={props?.multiline ? true : false}
           numberOfLines={props?.numberOfLines ?? 1}
-
+          placeholderTextColor={props?.placeholderTextColor?? colors.greyText}
         />
         {props?.secureTextEntry && <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={{ position: 'absolute', bottom: height * 1.5, right: width * 1, paddingRight: width * 2 }} activeOpacity={2}>
           <Image source={showPassword ? icons.eyehide : icons.eye} style={{ width: width * 6, height: width * 6, resizeMode: 'contain', tintColor: colors.red }} />
