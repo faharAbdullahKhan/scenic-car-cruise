@@ -41,6 +41,13 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         marginBottom: height * 2,
+    },
+    errorText: {
+        color: colors.primary,
+        fontWeight: 'bold',
+        textDecorationColor: colors.primary,
+        textDecorationStyle: 'dotted',
+        textDecorationLine: 'underline'
     }
 });
 

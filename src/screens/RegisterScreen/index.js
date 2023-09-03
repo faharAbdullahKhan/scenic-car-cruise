@@ -18,43 +18,72 @@ import {
 import styles from './styles';
 import { useDispatch } from 'react-redux';
 import TextInputWrapper from '../../components/TextInput';
-import { login } from '../../redux/actions/authActions';
+import { register } from '../../redux/actions/authActions';
 import { colors, icons } from '../../../assets';
 import { height, width } from '../../Units';
 
 const RegisterScreen = ({ navigation }) => {
   const dispatch = useDispatch();
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [vehicleYear, setVehicleYear] = useState('');
-  const [vehicleMake, setVehicleMake] = useState('');
-  const [vehicleModel, setVehicleModel] = useState('');
-  const [aboutMe, setAboutMe] = useState('');
-  // const [errorText, setErrorText] = useState('');
+  const [firstName, setFirstName] = useState('jhon');
+  const [lastName, setLastName] = useState('jhon');
+  const [email, setEmail] = useState('uk2903659@gmail.com');
+  const [username, setUsername] = useState('jhon');
+  const [phoneNumber, setPhoneNumber] = useState('55566454988');
+  const [address, setAddress] = useState('pikashousestreet11');
+  const [vehicleYear, setVehicleYear] = useState('2017');
+  const [vehicleMake, setVehicleMake] = useState('2015');
+  const [vehicleModel, setVehicleModel] = useState('2015');
+  const [aboutMe, setAboutMe] = useState('pikas is a good boy');
+  const [password, setPassword] = useState('12345678');
+  const [passwordConfirmation, setPasswordConfirmation] = useState('12345678');
+  const [errorText, setErrorText] = useState('');
 
   const onSubmit = async () => {
-    console.log(email, 'email-password', password);
-    // const regexExp =
-    //   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    // if (!email.trim()) {
-    //   setErrorText('Please enter email');
-    // } else if (!password.trim()) {
-    //   setErrorText('Please enter password');
-    // } else if (!regexExp.test(email.trim().toLowerCase())) {
-    //   setErrorText('Invalid Email');
-    // } else {
-    //   const data = {
-    //     email: email.trim(),
-    //     password: password.trim(),
-    //   };
-    //   await dispatch(login(data));
-    //   setEmail('');
-    //   setPassword('');
-    //   setErrorText('');
-    // }
+    setErrorText('');
+    if (password.trim() != passwordConfirmation.trim()) {
+      setErrorText('Password and Confirm Password must be same');
+    } else {
+      const data = {
+        first_name: firstName.trim(),
+        last_name: lastName.trim(),
+        email: email.trim(),
+        username: username.trim(),
+        phone: phoneNumber.trim(),
+        address: address.trim(),
+        vehicle_year: vehicleYear.trim(),
+        vehicle_make: vehicleMake.trim(),
+        about_me: aboutMe.trim(),
+        password: password.trim(),
+        password_confirmation: passwordConfirmation.trim()
+      };
+      try {
+        let resp = await dispatch(register(data));
+        navigation.pop();
+        console.log(resp?.message, 'wow');
+        // const regexExp =
+        //   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        // if (!email.trim()) {
+        //   setErrorText('Please enter email');
+        // } else if (!password.trim()) {
+        //   setErrorText('Please enter password');
+        // } else if (!regexExp.test(email.trim().toLowerCase())) {
+        //   setErrorText('Invalid Email');
+        // } else {
+        //   const data = {
+        //     email: email.trim(),
+        //     password: password.trim(),
+        //   };
+        //   await dispatch(login(data));
+        //   setEmail('');
+        //   setPassword('');
+        //   setErrorText('');
+        // }
+      }
+      catch (err) {
+        console.log('err',err)
+        setErrorText(err);
+      }
+    }
   };
   return (
     <SafeAreaView style={styles.safeAreaView}>
@@ -117,6 +146,13 @@ const RegisterScreen = ({ navigation }) => {
               styles={styles.inputContainer}
             />
             <TextInputWrapper
+              onChangeText={setAddress}
+              value={address}
+              placeholder="Address"
+              label="Address"
+              styles={styles.inputContainer}
+            />
+            <TextInputWrapper
               onChangeText={setVehicleYear}
               value={vehicleYear}
               placeholder="Vehicle Year"
@@ -146,7 +182,23 @@ const RegisterScreen = ({ navigation }) => {
               textStyles={{ height: height * 18 }}
               numberOfLines={40}
             />
-            {/* <Text style={styles.errorText}>{errorText}</Text> */}
+            <TextInputWrapper
+              onChangeText={setPassword}
+              value={password}
+              placeholder="Password"
+              label="Password"
+              secureTextEntry={true}
+              styles={styles.inputContainer}
+            />
+            <TextInputWrapper
+              onChangeText={setPasswordConfirmation}
+              value={passwordConfirmation}
+              placeholder="Confirm Password"
+              label="Confirm Password"
+              secureTextEntry={true}
+              styles={styles.inputContainer}
+            />
+            <Text style={styles.errorText}>{errorText}</Text>
             <TouchableOpacity onPress={onSubmit} style={styles.submitButton}>
               <Text style={styles.submitButtonText}>Signup</Text>
             </TouchableOpacity>

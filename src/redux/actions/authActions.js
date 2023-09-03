@@ -18,6 +18,22 @@ export const login = data => {
   };
 };
 
+export const register = data => {
+  return async dispatch => {
+    try {
+      const response = await post(
+        endpoints.register,
+        data,
+        true
+      );
+      // dispatch({ type: types.GET_LOGIN, payload: response });
+      return Promise.resolve(response);
+    } catch (e) {
+      return Promise.reject(e);
+    }
+  };
+};
+
 export const logout = () => {
   return async dispatch => {
     try {
