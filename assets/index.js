@@ -41,10 +41,9 @@ export const icons = {
   sponsorLogo: require('./images/sponsorLogo.png'),
   pdfIcon: require('./icons/pdfIcon.png'),
   routeName: require('./images/routeName.png'),
-  
+  recordAudio: require('./icons/recordAudio.png'),
+  sendMessage: require('./icons/sendMessage.png'),
 
-  // download2: require('./icons/download2.png'),
-  // download3: require('./icons/download3.png'),
   // download4: require('./icons/download4.png'),
   // bookmarked: require('./icons/bookmarked.png'),
   // faqs: require('./icons/faq.png'),

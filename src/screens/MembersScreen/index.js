@@ -56,11 +56,13 @@ const MembersScreen = ({ navigation }) => {
                 alignItems: 'center',
                 justifyContent: 'center'
             }}>
+                <TouchableOpacity onPress={()=>navigation.navigate('Message')}>
                 <Image source={icons.chatGroup} style={{
                     width: width * 7.5,
                     height: width * 7.5,
                     resizeMode: 'contain',
                 }} />
+                </TouchableOpacity>
                 {index != 0 ? <Image source={icons.trippleLineIcon} style={{
                     width: width * 5,
                     height: width * 5,
