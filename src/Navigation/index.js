@@ -9,6 +9,8 @@ import ProfileScreen from '../screens/ProfileScreen';
 import EditProfileScreen from '../screens/EditProfileScreen';
 import CommentsScreen from '../screens/CommentsScreen';
 import AllRoutesScreen from '../screens/AllRoutesScreen';
+import RouteDetailScreen from '../screens/RouteDetailScreen';
+import MembersScreen from '../screens/MembersScreen';
 
 const Auth = createNativeStackNavigator();
 const App = createNativeStackNavigator();
@@ -39,7 +41,8 @@ export const AppStack = () => {
       <App.Screen name="EditProfile" component={EditProfileScreen} />
       <App.Screen name="Comments" component={CommentsScreen} />
       <App.Screen name="AllRoutes" component={AllRoutesScreen} />
-      
+      <App.Screen name="RouteDetail" component={RouteDetailScreen} />
+      <App.Screen name="Members" component={MembersScreen} />
     </App.Navigator>
   );
 };

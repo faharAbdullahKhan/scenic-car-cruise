@@ -36,7 +36,7 @@ const ProfileScreen = ({ navigation }) => {
     };
     const homeItem = ({ item, index }) => {
         return <TouchableOpacity key={index}
-            // onPress={onSubmit} 
+            onPress={() => navigation.navigate('RouteDetail')}
             style={styles.submitButton}>
             <View style={{
                 width: width * 49,

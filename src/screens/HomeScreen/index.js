@@ -36,9 +36,9 @@ const HomeScreen = ({ navigation }) => {
     // const onSubmit = async () => {
     // };
     const homeItem = ({ item, index }) => {
-        return <TouchableOpacity key={index} 
-        // onPress={onSubmit} 
-        style={styles.submitButton}>
+        return <TouchableOpacity key={index}
+            // onPress={onSubmit} 
+            style={styles.submitButton}>
             <Text style={styles.submitButtonText}>{item.name}</Text>
             <Image source={icons.PlusIcon} style={{ width: width * 4, height: width * 4, resizeMode: 'contain' }} />
         </TouchableOpacity>
@@ -58,11 +58,13 @@ const HomeScreen = ({ navigation }) => {
                     }}>
                         <View style={{ alignItems: 'flex-end', marginBottom: width * 6 }}>
                             <View style={{ alignItems: 'center' }}>
-                                <Image source={icons.profileImage} style={{
-                                    height: width * 11,
-                                    width: width * 11,
-                                    resizeMode: 'contain'
-                                }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('Members')}>
+                                    <Image source={icons.profileImage} style={{
+                                        height: width * 11,
+                                        width: width * 11,
+                                        resizeMode: 'contain'
+                                    }} />
+                                </TouchableOpacity>
                                 <Text style={{
                                     color: colors.white,
                                     fontSize: width * 3.5,
