@@ -78,6 +78,7 @@ const HomeScreen = ({ navigation }) => {
                             value={searchText}
                             placeholder="Search"
                             textStyles={{ width: width * 85 }}
+                            clickSearch={() => navigation.navigate('AllRoutesList')}
                         />
 
                         <FlatList

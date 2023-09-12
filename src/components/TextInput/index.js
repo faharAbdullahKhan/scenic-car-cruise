@@ -30,7 +30,7 @@ const TextInputWrapper = props => {
 
         />
         <TouchableOpacity
-          // onPress={() => setShowPassword(!showPassword)} 
+          onPress={() => props?.clickSearch?props?.clickSearch(): null} 
           style={[{ position: 'absolute', bottom: width * 4, right: width * 1, paddingRight: width * 2 }, props?.messageIconContainerStyles]} activeOpacity={2}>
           <Image source={props?.search ? icons.searchIcon : props?.edit ? icons.editIcon : props?.messgae ? icons.sendMessage : icons.forwardArrow} style={[{ width: width * 4, height: width * 4, resizeMode: 'contain' }, props?.messageIconStyles]} />
         </TouchableOpacity>

@@ -1,5 +1,3 @@
-// import { useSelector } from 'react-redux';
-
 export const icons = {
   loginHeader: require('./images/loginHeader.png'),
   profileImage: require('./images/profileImage.png'),
@@ -43,31 +41,12 @@ export const icons = {
   routeName: require('./images/routeName.png'),
   recordAudio: require('./icons/recordAudio.png'),
   sendMessage: require('./icons/sendMessage.png'),
-
-  // download4: require('./icons/download4.png'),
-  // bookmarked: require('./icons/bookmarked.png'),
-  // faqs: require('./icons/faq.png'),
-  // darkmode: require('./icons/darkmode.png'),
-  // google: require('./icons/google.png'),
-  // CFAP: require('./images/CFAP.png'),
-  // CFAP2: require('./images/CFAP2.png'),
-  // kns: require('./icons/kns.png'),
-  // video: require('./icons/video.png'),
-  // cancelDownload: require('./icons/cancelDownload.png'),
-  // delete: require('./icons/delete.png'),
-  // no_video: require('./icons/novideo.png'),
-  // editProfile: require('./icons/editProfile.png'),
-  // camera: require('./icons/camera.png'),
-  // info: require('./icons/info.png'),
-  // bookmark_outline: require('./icons/bookmark_outline.png'),
-  // downloaded: require('./icons/download5.png'),
-  // moon: require('./icons/moon.png'),
-  // faqs: require('./icons/faqs.png'),
-  // logout2: require('./icons/logout2.png'),
+  crossIcon: require('./icons/crossIcon.png'),
+  mapIcon: require('./icons/mapIcon.png'),
+  mapImage: require('./images/mapImage.png'),
 };
 
 export const colors = {
-  // primary: '#E94624',
   buttonColor: '#21668E',
   red: '#DB312A',
   black: '#023047',
@@ -77,7 +56,6 @@ export const colors = {
   greyText2: '#7E7E7E',
   greyLight: '#B9B9B9',
   primary: '#DB312A',
-  temp:'orange'
 };
 
 // export const fonts = {
