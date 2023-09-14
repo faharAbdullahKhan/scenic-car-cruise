@@ -44,6 +44,10 @@ export const icons = {
   crossIcon: require('./icons/crossIcon.png'),
   mapIcon: require('./icons/mapIcon.png'),
   mapImage: require('./images/mapImage.png'),
+  mapImage2: require('./images/mapImage2.png'),
+  pic1: require('./images/pic1.png'),
+  pic2: require('./images/pic2.png'),
+  playVideoIcon: require('./icons/playVideoIcon.png'),
 };
 
 export const colors = {
@@ -56,6 +60,7 @@ export const colors = {
   greyText2: '#7E7E7E',
   greyLight: '#B9B9B9',
   primary: '#DB312A',
+  red: '#D9312A'
 };
 
 // export const fonts = {

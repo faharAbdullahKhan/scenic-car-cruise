@@ -44,6 +44,7 @@ const AllRoutesListScreen = ({ navigation }) => {
             width: width * 90,
             alignSelf: 'center'
         }}>
+            <TouchableOpacity onPress={()=>navigation.navigate('AllRouteDetailScreen')}>
             <ImageBackground source={icons.mapImage} style={styles.submitButton}>
 
                 <View style={{
@@ -147,6 +148,7 @@ const AllRoutesListScreen = ({ navigation }) => {
                     </View>
                 </View>
             </ImageBackground>
+            </TouchableOpacity>
             <View style={{
                 position: 'absolute',
                 top: width * -2,
