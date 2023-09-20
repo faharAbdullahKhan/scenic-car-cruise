@@ -56,7 +56,11 @@ export const icons = {
   PDFI: require('./icons/PDFI.png'),
   ShareI: require('./icons/ShareI.png'),
   DestinationIcon: require('./icons/DestinationIcon.png'),
-  AleartI: require('./icons/AleartI.png')
+  AleartI: require('./icons/AleartI.png'),
+  leftIconShare: require('./icons/leftIconShare.png'),
+  crossIcon: require('./icons/crossIcon1.png'),
+  ChatIcon2: require('./icons/ChatIcon2.png'),
+  PauseIcon: require('./icons/PauseIcon.png'),
 };
 
 export const colors = {
