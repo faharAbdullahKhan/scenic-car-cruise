@@ -48,6 +48,15 @@ export const icons = {
   pic1: require('./images/pic1.png'),
   pic2: require('./images/pic2.png'),
   playVideoIcon: require('./icons/playVideoIcon.png'),
+  mapFullScreen: require('./images/mapFullScreen.png'),
+  chatIcon1: require('./icons/chatIcon1.png'),
+  HeartO: require('./icons/HeartO.png'),
+  PinL: require('./icons/PinL.png'),
+  ChatI: require('./icons/ChatI.png'),
+  PDFI: require('./icons/PDFI.png'),
+  ShareI: require('./icons/ShareI.png'),
+  DestinationIcon: require('./icons/DestinationIcon.png'),
+  AleartI: require('./icons/AleartI.png')
 };
 
 export const colors = {
@@ -60,7 +69,8 @@ export const colors = {
   greyText2: '#7E7E7E',
   greyLight: '#B9B9B9',
   primary: '#DB312A',
-  red: '#D9312A'
+  red: '#D9312A',
+  pink: '#fbe9ea'
 };
 
 // export const fonts = {
