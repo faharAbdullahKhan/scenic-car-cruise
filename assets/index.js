@@ -61,6 +61,14 @@ export const icons = {
   crossIcon: require('./icons/crossIcon1.png'),
   ChatIcon2: require('./icons/ChatIcon2.png'),
   PauseIcon: require('./icons/PauseIcon.png'),
+  
+  pen: require('./icons/pen.png'),
+  picIc: require('./icons/picIc.png'),
+  videoIc: require('./icons/videoIc.png'),
+  typoIc: require('./icons/typoIc.png'),
+  saveIc: require('./icons/saveIc.png'),
+  binIc: require('./icons/binIc.png'),
+  frameIc: require('./icons/frameIc.png'),
 };
 
 export const colors = {

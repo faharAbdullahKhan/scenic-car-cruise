@@ -16,6 +16,7 @@ import AllRoutesListScreen from '../screens/AllRoutesListScreen';
 import AllRouteDetailScreen from '../screens/AllRouteDetailScreen';
 import MapHomeScreen from '../screens/MapHomeScreen';
 import MapScreenTwo from '../screens/MapScreenTwo';
+import MapScreenThree from '../screens/MapScreenThree';
 
 const Auth = createNativeStackNavigator();
 const App = createNativeStackNavigator();
@@ -53,6 +54,7 @@ export const AppStack = () => {
       <App.Screen name="AllRouteDetailScreen" component={AllRouteDetailScreen} />
       <App.Screen name="MapHomeScreen" component={MapHomeScreen} />
       <App.Screen name="MapScreenTwo" component={MapScreenTwo} />
+      <App.Screen name="MapScreenThree" component={MapScreenThree} />
     </App.Navigator>
   );
 };

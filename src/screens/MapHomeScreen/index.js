@@ -255,7 +255,9 @@ const MapHomeScreen = ({ navigation }) => {
                                     backgroundColor: colors.buttonColor,
                                     borderRadius: width * 1.5,
                                     alignSelf: 'center'
-                                }}>
+                                }}
+                                onPress={() => navigation.navigate('MapScreenThree')}
+                                >
                                     <Text style={{
                                         color: '#FFF',
                                         fontSize: width * 3.8,
