@@ -67,10 +67,10 @@ const AllRoutesScreen = ({ navigation }) => {
                     </View>
                 </View>
                 <View style={{
-                    width: width * 30,
+                    width: width * 29.5,
                 }}>
                     <View style={{
-                        width: width * 30,
+                        width: width * 28,
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         alignSelf: 'flex-end'
@@ -78,7 +78,7 @@ const AllRoutesScreen = ({ navigation }) => {
                         <View style={{
                             flexDirection: 'row',
                             alignItems: 'center',
-                            width: width * 9,
+                            width: width * 8,
                             justifyContent: 'center'
                         }}>
                             <Image source={icons.likeIcon} style={{
@@ -89,30 +89,34 @@ const AllRoutesScreen = ({ navigation }) => {
                             }} />
                             <Text style={{
                                 fontSize: width * 3.3,
-                                color: colors.black
+                                color: colors.black,
+                                width: width * 5,
+                                textAlign: 'center',
                             }}>95</Text>
                         </View>
                         <View style={{
                             flexDirection: 'row',
                             alignItems: 'center',
-                            width: width * 9,
+                            width: width * 8,
                             justifyContent: 'center'
                         }}>
                             <Image source={icons.chatIcon} style={{
                                 resizeMode: 'contain',
                                 marginRight: width * 0.5,
-                                width: width * 3.5,
-                                height: width * 3.5
+                                width: width * 3,
+                                height: width * 3
                             }} />
                             <Text style={{
                                 fontSize: width * 3.3,
-                                color: colors.black
+                                color: colors.black,
+                                width: width * 5,
+                                textAlign: 'center'
                             }}>15</Text>
                         </View>
                         <View style={{
                             flexDirection: 'row',
                             alignItems: 'center',
-                            width: width * 9,
+                            width: width * 8,
                             justifyContent: 'center'
                         }}>
                             <Image source={icons.starIcon} style={{
@@ -123,13 +127,15 @@ const AllRoutesScreen = ({ navigation }) => {
                             }} />
                             <Text style={{
                                 fontSize: width * 3.3,
-                                color: colors.black
+                                color: colors.black,
+                                width: width * 5,
+                                textAlign: 'center',
                             }}>4.9</Text>
                         </View>
                     </View>
                     <View style={{
                         marginTop: width * 1,
-                        width: width * 30,
+                        width: width * 28,
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         alignSelf: 'flex-end'
@@ -137,7 +143,7 @@ const AllRoutesScreen = ({ navigation }) => {
                         <View style={{
                             flexDirection: 'row',
                             alignItems: 'center',
-                            width: width * 9,
+                            width: width * 8,
                             justifyContent: 'center'
                         }}>
                             <Image source={icons.pictureIcon} style={{
@@ -148,13 +154,15 @@ const AllRoutesScreen = ({ navigation }) => {
                             }} />
                             <Text style={{
                                 fontSize: width * 3.3,
-                                color: colors.black
+                                color: colors.black,
+                                width: width * 5,
+                                textAlign: 'center',
                             }}>8</Text>
                         </View>
                         <View style={{
                             flexDirection: 'row',
                             alignItems: 'center',
-                            width: width * 9,
+                            width: width * 8,
                             justifyContent: 'center'
                         }}>
                             <Image source={icons.trippleLineIcon} style={{
@@ -165,13 +173,15 @@ const AllRoutesScreen = ({ navigation }) => {
                             }} />
                             <Text style={{
                                 fontSize: width * 3.3,
-                                color: colors.black
+                                color: colors.black,
+                                width: width * 5,
+                                textAlign: 'center',
                             }}>2</Text>
                         </View>
                         <View style={{
                             flexDirection: 'row',
                             alignItems: 'center',
-                            width: width * 9,
+                            width: width * 8,
                             justifyContent: 'center'
                         }}>
                             <Image source={icons.videoIcon} style={{
@@ -182,18 +192,20 @@ const AllRoutesScreen = ({ navigation }) => {
                             }} />
                             <Text style={{
                                 fontSize: width * 3.3,
-                                color: colors.black
+                                color: colors.black,
+                                width: width * 5,
+                                textAlign: 'center',
                             }}>5</Text>
                         </View>
                     </View>
                     {containMyRoute.includes(index) ? <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: width * 5 }}>
-                        <TouchableOpacity style={{ width: width * 14.2, height: width * 5, borderRadius: width * 1.2, backgroundColor: colors.buttonColor, alignItems: 'center', justifyContent: 'center' }}>
+                        <TouchableOpacity style={{ width: width * 14.2, height: width * 5, borderRadius: width * 1.2, backgroundColor: colors.red, alignItems: 'center', justifyContent: 'center' }}>
                             <Text style={{
                                 color: colors.white,
                                 fontSize: width * 2
                             }}>Unpublish</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{ width: width * 14.2, height: width * 5, borderRadius: width * 1.2, backgroundColor: colors.red, alignItems: 'center', justifyContent: 'center' }}>
+                        <TouchableOpacity style={{ width: width * 14.2, height: width * 5, borderRadius: width * 1.2, backgroundColor: colors.buttonColor, alignItems: 'center', justifyContent: 'center' }}>
                             <Text style={{
                                 color: colors.white,
                                 fontSize: width * 2

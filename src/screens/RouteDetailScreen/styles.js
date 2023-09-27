@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+        backgroundColor: colors.white
     },
     submitButton: {
         // height: width * 12,

@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+        backgroundColor: colors.white
     },
     submitButton: {
         flexDirection: 'row',
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     },
     submitButtonText3: {
         fontSize: width * 2.5,
-        color: colors.greyText,
+        color: colors.greyText3,
         marginVertical: width * 0.5,
         letterSpacing: width * 0.1
     }

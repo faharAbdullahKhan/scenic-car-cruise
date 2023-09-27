@@ -13,6 +13,7 @@ import {
   View,
   TouchableOpacity,
   Image,
+  ScrollView,
 } from 'react-native';
 import styles from './styles';
 import { useDispatch } from 'react-redux';
@@ -53,52 +54,60 @@ const LoginScreen = ({ navigation }) => {
     <SafeAreaView style={styles.safeAreaView}>
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
-        <Image source={icons.loginHeader} style={styles.loginHeader} />
-        <View style={{ alignItems: 'center', marginTop: height * 3 }}>
-          <TextInputWrapper
-            onChangeText={setEmail}
-            value={email}
-            placeholder="Email Address"
-            label="Email"
-          />
-          <TextInputWrapper
-            onChangeText={setPassword}
-            value={password}
-            placeholder="Password"
-            label="Password"
-            secureTextEntry={true}
-            styles={styles.passwordContainer}
-          />
-          <View style={{ flexDirection: 'row', width: width * 80, justifyContent: 'space-between', marginTop: height * 1.5 }}>
-            <Text style={{ color: colors.blackText, textDecorationLine: 'underline', fontSize: width * 3 }}>Forgot username</Text>
-            <Text style={{ color: colors.blackText, textDecorationLine: 'underline', fontSize: width * 3 }}>Forgot password?</Text>
+        <ScrollView>
+          <Image source={icons.loginHeader} style={styles.loginHeader} />
+          <View style={{ alignItems: 'center', marginTop: height * 3 }}>
+            <TextInputWrapper
+              onChangeText={setEmail}
+              value={email}
+              placeholder="Email Address"
+              label="Email"
+              textStyles={{
+                color: colors.fontInputBlack
+              }}
+            />
+            <TextInputWrapper
+              onChangeText={setPassword}
+              value={password}
+              placeholder="Password"
+              label="Password"
+              secureTextEntry={true}
+              styles={styles.passwordContainer}
+              textStyles={{
+                color: colors.fontInputBlack
+              }}
+            />
+            <View style={{ flexDirection: 'row', width: width * 80, justifyContent: 'space-between', marginTop: height * 1.8 }}>
+              <Text style={{ color: colors.fontTextBlack, textDecorationLine: 'underline', fontSize: width * 3 }}>Forgot username</Text>
+              <Text style={{ color: colors.fontTextBlack, textDecorationLine: 'underline', fontSize: width * 3 }}>Forgot password?</Text>
+            </View>
+            {/* <Text style={styles.errorText}>{errorText}</Text> */}
+            <TouchableOpacity onPress={onSubmit} style={styles.submitButton}>
+              <Text style={styles.submitButtonText}>Login</Text>
+            </TouchableOpacity>
           </View>
-          {/* <Text style={styles.errorText}>{errorText}</Text> */}
-          <TouchableOpacity onPress={onSubmit} style={styles.submitButton}>
-            <Text style={styles.submitButtonText}>Login</Text>
-          </TouchableOpacity>
-        </View>
+        </ScrollView>
         <View style={{
-          flexDirection: 'row',
-          justifyContent: 'center',
-          flex: 1,
-          alignItems: 'flex-end',
-          paddingBottom: height * 2
-        }}>
-          <Text style={{
-            color: colors.greyText,
-            fontWeight: '400',
-            fontSize: width * 3.5
-          }}>Don’t have an account? </Text>
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={() => navigation.push('Register')}>
+            flexDirection: 'row',
+            justifyContent: 'center',
+            flex: 1,
+            alignItems: 'flex-end',
+            paddingBottom: height * 2
+          }}>
             <Text style={{
-              color: colors.red,
-              fontWeight: 'bold',
+              color: colors.greyText,
+              fontWeight: '400',
               fontSize: width * 3.5
-            }}>Signup</Text></TouchableOpacity>
-        </View>
+            }}>Don’t have an account? </Text>
+            <TouchableOpacity
+              activeOpacity={0.8}
+              onPress={() => navigation.push('Register')}>
+              <Text style={{
+                color: colors.primary,
+                fontWeight: 'bold',
+                fontSize: width * 3.5
+              }}>Signup</Text></TouchableOpacity>
+          </View>
       </View>
     </SafeAreaView>
   );

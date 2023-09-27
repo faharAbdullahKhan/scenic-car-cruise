@@ -39,7 +39,7 @@ const ProfileScreen = ({ navigation }) => {
             onPress={() => navigation.navigate('RouteDetail')}
             style={styles.submitButton}>
             <View style={{
-                width: width * 49,
+                width: width * 47,
             }}>
 
                 <Text style={styles.submitButtonText}>{item.name}</Text>
@@ -102,13 +102,13 @@ const ProfileScreen = ({ navigation }) => {
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: width * 8 }}>
-                    <TouchableOpacity style={{ width: width * 16, height: width * 5, borderRadius: width * 1.2, backgroundColor: colors.buttonColor, alignItems: 'center', justifyContent: 'center' }}>
+                    <TouchableOpacity style={{ width: width * 16.5, height: width * 5, borderRadius: width * 1.2, backgroundColor: colors.buttonColor, alignItems: 'center', justifyContent: 'center' }}>
                         <Text style={{
                             color: colors.white,
                             fontSize: width * 2
                         }}>Edit Route</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ width: width * 16, height: width * 5, borderRadius: width * 1.2, backgroundColor: colors.red, alignItems: 'center', justifyContent: 'center' }}>
+                    <TouchableOpacity style={{ width: width * 16.5, height: width * 5, borderRadius: width * 1.2, backgroundColor: colors.red, alignItems: 'center', justifyContent: 'center' }}>
                         <Text style={{
                             color: colors.white,
                             fontSize: width * 2

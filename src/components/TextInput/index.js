@@ -65,7 +65,7 @@ const TextInputWrapper = props => {
       }, props?.styles]}>
         {props?.label && <Text style={{
           fontWeight: '600',
-          color: colors.black,
+          color: colors.fontTitleBlack,
           marginVertical: height * 0.3,
           fontSize: width * 3.5
         }}>{props?.label ?? 'Label'}</Text>}

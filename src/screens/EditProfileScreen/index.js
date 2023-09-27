@@ -26,6 +26,7 @@ const EditProfileScreen = ({ navigation }) => {
     const dispatch = useDispatch();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
     const [userName, setUserName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [vehicleYear, setVehicleYear] = useState('');
@@ -70,14 +71,16 @@ const EditProfileScreen = ({ navigation }) => {
                         <Image source={icons.shareIcon} style={{
                             resizeMode: 'contain',
                             width: width * 6.5,
-                            height: width * 6.5
+                            height: width * 6.5,
                         }} />
                     </View>
                     <View style={{
                         alignItems: 'center',
                         marginBottom: width * 10
                     }}>
-                        <View>
+                        <View style={{
+                            marginTop: width * -8
+                        }}>
                             <Image source={icons.profileImage2}
                                 style={{
                                     height: width * 21,
@@ -134,49 +137,64 @@ const EditProfileScreen = ({ navigation }) => {
                             value={firstName}
                             placeholder="First Name"
                             edit={true}
-                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText, marginBottom: width * 1.75 }}
+                            placeholderTextColor={colors.greyText4}
+                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText4, marginBottom: width * 1.75 }}
                         />
                         <TextInputWrapper
                             onChangeText={setLastName}
                             value={lastName}
                             placeholder="Last Name"
                             edit={true}
-                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText, marginBottom: width * 1.75 }}
+                            placeholderTextColor={colors.greyText4}
+                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText4, marginBottom: width * 1.75 }}
+                        />
+                        <TextInputWrapper
+                            onChangeText={setEmail}
+                            value={email}
+                            placeholder="Email"
+                            edit={true}
+                            placeholderTextColor={colors.greyText4}
+                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText4, marginBottom: width * 1.75 }}
                         />
                         <TextInputWrapper
                             onChangeText={setUserName}
                             value={userName}
                             placeholder="Username"
                             edit={true}
-                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText, marginBottom: width * 1.75 }}
+                            placeholderTextColor={colors.greyText4}
+                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText4, marginBottom: width * 1.75 }}
                         />
                         <TextInputWrapper
                             onChangeText={setPhoneNumber}
                             value={phoneNumber}
                             placeholder="Phone Number"
                             edit={true}
-                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText, marginBottom: width * 1.75 }}
+                            placeholderTextColor={colors.greyText4}
+                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText4, marginBottom: width * 1.75 }}
                         />
                         <TextInputWrapper
                             onChangeText={setVehicleYear}
                             value={vehicleYear}
                             placeholder="Vehicle Year"
                             edit={true}
-                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText, marginBottom: width * 1.75 }}
+                            placeholderTextColor={colors.greyText4}
+                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText4, marginBottom: width * 1.75 }}
                         />
                         <TextInputWrapper
                             onChangeText={setVehicleModel}
                             value={vehicleModel}
                             placeholder="Vehicle Model"
                             edit={true}
-                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText, marginBottom: width * 1.75 }}
+                            placeholderTextColor={colors.greyText4}
+                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText4, marginBottom: width * 1.75 }}
                         />
                         <TextInputWrapper
                             onChangeText={setVehicleMake}
                             value={vehicleMake}
                             placeholder="Vehicle Make"
                             edit={true}
-                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText, marginBottom: width * 1.75 }}
+                            placeholderTextColor={colors.greyText4}
+                            textStyles={{ width: width * 90, elevation: 0, borderBottomWidth: width * 0.2, borderBottomColor: colors.greyText4, marginBottom: width * 1.75 }}
                         />
                         <TouchableOpacity
                             // onPress={onSubmit} 

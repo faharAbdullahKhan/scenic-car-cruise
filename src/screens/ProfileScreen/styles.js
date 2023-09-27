@@ -8,17 +8,20 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+        backgroundColor: colors.white
     },
     submitButton: {
         flexDirection: 'row',
         height: width * 27,
+        width: width * 88,
+        marginLeft: width * 1,
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: colors.white,
         borderRadius: width * 1.5,
         marginTop: height * 1.7,
         paddingHorizontal: width * 5,
-        shadowColor: "#000",
+        shadowColor: "#000000",
         shadowOffset: {
             width: 0,
             height: 1,
@@ -41,7 +44,7 @@ const styles = StyleSheet.create({
     },
     submitButtonText3: {
         fontSize: width * 2.5,
-        color: colors.greyText,
+        color: colors.greyText3,
         marginVertical: width * 0.5,
         letterSpacing: width * 0.1
     }

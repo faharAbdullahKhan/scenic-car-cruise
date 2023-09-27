@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
     },
     submitButtonText: {
         color: colors.white,
-        fontSize: width * 4.5,
-        fontWeight: '500',
+        fontSize: width * 4,
+        fontWeight: '400',
         marginVertical: width * 0.5
     },
     submitButtonText2: {

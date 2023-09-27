@@ -11,14 +11,23 @@ const styles = StyleSheet.create({
         padding: width * 1.5,
         paddingLeft: width * 3,
         borderRadius: width * 1.5,
+        // shadowColor: "#000",
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 2,
+        // },
+        // shadowOpacity: 0.25,
+        // shadowRadius: 3.84,
+        // elevation: 5,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 11,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
+        shadowOpacity: 0.55,
+        shadowRadius: 14.78,
+
+        elevation: 22,
     },
 });
 

@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+        backgroundColor: colors.white
     },
     loginHeader: {
         width: width * 100,
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     submitButtonText: {
         color: '#FFF',
         fontSize: width * 3.2,
-        fontWeight: '700'
+        fontWeight: '500'
     },
     passwordContainer: {
         marginTop: height * 1.5

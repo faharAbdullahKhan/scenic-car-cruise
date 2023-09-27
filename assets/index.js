@@ -79,10 +79,15 @@ export const colors = {
   blackText: '#000000',
   greyText: '#5F5F5F',
   greyText2: '#7E7E7E',
+  greyText3: '#888888',
+  greyText4: '#838383',
   greyLight: '#B9B9B9',
   primary: '#DB312A',
   red: '#D9312A',
-  pink: '#fbe9ea'
+  pink: '#fbe9ea',
+  fontTitleBlack: '#023047',
+  fontInputBlack: '#444444',
+  fontTextBlack: '#000000'
 };
 
 // export const fonts = {
