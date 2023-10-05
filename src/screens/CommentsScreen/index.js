@@ -41,7 +41,7 @@ const CommentsScreen = ({ navigation }) => {
                     }} />
                 </View>
                 <View style={{
-                    marginLeft: width * 2
+                    marginLeft: width * 1
                 }}>
                     <Text style={{
                         color: colors.black,
@@ -60,7 +60,7 @@ const CommentsScreen = ({ navigation }) => {
                         }} />
                         <Text style={{
                             color: colors.black,
-                            fontSize: width * 2.8
+                            fontSize: width * 2.6
                         }}>4.9</Text>
                     </View>
                 </View>
