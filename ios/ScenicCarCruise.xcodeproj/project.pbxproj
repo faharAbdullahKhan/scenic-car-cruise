@@ -490,6 +490,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ScenicCarCruise/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Scenic car cruise";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,6 +519,7 @@
 				DEVELOPMENT_TEAM = K5QNTL8BSX;
 				INFOPLIST_FILE = ScenicCarCruise/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Scenic car cruise";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
