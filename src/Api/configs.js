@@ -1,4 +1,4 @@
-export const base_url = `https://staffshaw.com/cruise/`;
+export const base_url = `https://www.checkyourproject.website/cruise/`;
 export const endpoints = {
   login: 'api/auth/login',
   register: 'api/auth/register',

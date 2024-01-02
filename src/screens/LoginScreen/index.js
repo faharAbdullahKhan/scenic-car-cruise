@@ -24,8 +24,8 @@ import { height, width } from '../../Units';
 
 const LoginScreen = ({ navigation }) => {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState('uk2903656@gmail.com');
-  const [password, setPassword] = useState('12345678');
+  const [email, setEmail] = useState('pikas123@gmail.com');
+  const [password, setPassword] = useState('admin123');
   // const [errorText, setErrorText] = useState('');
 
   const onSubmit = async () => {
