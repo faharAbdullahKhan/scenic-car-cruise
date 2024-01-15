@@ -37,7 +37,7 @@ const HomeScreen = ({ navigation }) => {
     // };
     const homeItem = ({ item, index }) => {
         return <TouchableOpacity key={index}
-            onPress={()=>navigation.navigate('MapHomeScreen')} 
+            onPress={() => navigation.navigate('AllRoutesList')}
             style={styles.submitButton}>
             <Text style={styles.submitButtonText}>{item.name}</Text>
             <Image source={icons.PlusIcon} style={{ width: width * 4, height: width * 4, resizeMode: 'contain' }} />
